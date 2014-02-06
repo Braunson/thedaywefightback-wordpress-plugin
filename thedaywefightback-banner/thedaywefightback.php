@@ -10,7 +10,7 @@ Author: Taskforce.is
 Author URI: https://thedaywefightback.org
 
 === RELEASE NOTES ===
-2013-10-18 - v1.0 - Initial release
+2014-02-05 - v1.0 - Initial release
 */
 
 /* 
