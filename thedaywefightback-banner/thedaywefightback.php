@@ -32,22 +32,22 @@ Online: http://www.gnu.org/licenses/gpl.txt
 
 
 function tdwfb_register_settings() {
-	add_option( 'tdwfb_greeting', '');
-	add_option( 'tdwfb_debug_mode', '0');
-	add_option( 'tdwfb_over_date', '0');
-	add_option( 'tdwfb_force_intl', '0');
-	add_option( 'tdwfb_call_only', '0');
+    add_option( 'tdwfb_greeting', '');
+    add_option( 'tdwfb_debug_mode', '0');
+    add_option( 'tdwfb_over_date', '0');
+    add_option( 'tdwfb_force_intl', '0');
+    add_option( 'tdwfb_call_only', '0');
     
-	register_setting( 'default', 'tdwfb_greeting' );     
-	register_setting( 'default', 'tdwfb_debug_mode' ); 
-	register_setting( 'default', 'tdwfb_over_date' ); 
-	register_setting( 'default', 'tdwfb_force_intl' ); 
+    register_setting( 'default', 'tdwfb_greeting' );     
+    register_setting( 'default', 'tdwfb_debug_mode' ); 
+    register_setting( 'default', 'tdwfb_over_date' ); 
+    register_setting( 'default', 'tdwfb_force_intl' ); 
     register_setting( 'default', 'tdwfb_call_only' );
 } 
 add_action( 'admin_init', 'tdwfb_register_settings' );
  
 function tdwfb_register_options_page() {
-	add_options_page('The Day We Fight Back - Banner Settings', 'TDWFB Settings', 'manage_options', 'tdwfb-options', 'tdwfb_options_page');
+    add_options_page('The Day We Fight Back - Banner Settings', 'TDWFB Settings', 'manage_options', 'tdwfb-options', 'tdwfb_options_page');
 }
 add_action('admin_menu', 'tdwfb_register_options_page');
 
@@ -118,8 +118,8 @@ function tdwfb_options_page() {
 <?php
 }
 
-    function add_thedaywefightback_banner() {
-        echo "<!--[if !(lte IE 8)]><!-->
+function add_thedaywefightback_banner() {
+    echo "<!--[if !(lte IE 8)]><!-->
 <script type=\"text/javascript\"> 
   // @license magnet:?xt=urn:btih:0b31508aeb0634b347b8270c7bee4d411b5d4109&dn=agpl-3.0.txt GPL-v3-or-Later
   var tdwfb_config = {
@@ -137,8 +137,7 @@ function tdwfb_options_page() {
   // @license-end
 </script>
 <!--<![endif]-->";
-    }
-    
-    add_action('wp_footer', 'add_thedaywefightback_banner', 1);
+}
+add_action('wp_footer', 'add_thedaywefightback_banner', 1);
 
 ?>
