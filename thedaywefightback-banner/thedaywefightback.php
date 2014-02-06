@@ -32,17 +32,17 @@ Online: http://www.gnu.org/licenses/gpl.txt
 
 
 function tdwfb_register_settings() {
-    add_option( 'tdwfb_greeting', '');
-    add_option( 'tdwfb_debug_mode', '0');
-    add_option( 'tdwfb_over_date', '0');
-    add_option( 'tdwfb_force_intl', '0');
-    add_option( 'tdwfb_call_only', '0');
+    add_option('tdwfb_greeting', '');
+    add_option('tdwfb_debug_mode', '0');
+    add_option('tdwfb_over_date', '0');
+    add_option('tdwfb_force_intl', '0');
+    add_option('tdwfb_call_only', '0');
     
-    register_setting( 'default', 'tdwfb_greeting' );     
-    register_setting( 'default', 'tdwfb_debug_mode' ); 
-    register_setting( 'default', 'tdwfb_over_date' ); 
-    register_setting( 'default', 'tdwfb_force_intl' ); 
-    register_setting( 'default', 'tdwfb_call_only' );
+    register_setting('default', 'tdwfb_greeting');     
+    register_setting('default', 'tdwfb_debug_mode'); 
+    register_setting('default', 'tdwfb_over_date'); 
+    register_setting('default', 'tdwfb_force_intl'); 
+    register_setting('default', 'tdwfb_call_only');
 } 
 add_action( 'admin_init', 'tdwfb_register_settings' );
  
@@ -65,7 +65,7 @@ function tdwfb_options_page() {
         <?php settings_fields( 'default' ); ?>
         <table class="form-table">
             <tr valign="top">
-                <th scope="row"><label for="tdwfb_greeting">Greeting</label></th>
+                <th scope="row"><label for="tdwfb_greeting">User Greeting</label></th>
                 <td>
                     <input type="text" id="tdwfb_greeting" name="tdwfb_greeting" value="<?php echo $option_greeting; ?>" />
                     Leaving this blank will default the banner to 'Dear Internet'.
